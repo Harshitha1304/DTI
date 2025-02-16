@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    /* Fallback background color */
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    color: #32CD32;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #dcdcdc;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 20px;
+    background-color: #32CD32;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #28a745;
+    transform: scale(1.1);
+}
+
+.chat-container {
+    padding: 20px;
+    animation: fadeIn 2s;
+}
+
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chat-log {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.user {
+    background-color: rgba(50, 205, 50, 0.3);
+    text-align: right;
+    animation: slideInRight 0.5s;
+}
+
+.bot {
+    background-color: rgba(207, 226, 255, 0.3);
+    animation: slideInLeft 0.5s;
+}
+
+#user-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#user-query {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+#language-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #32CD32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #28a745;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

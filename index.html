@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiWizard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='black.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Welcome to WikiWizard</h1>
+        <p>WikiWizard is your go-to bot for all information needs. Ask anything and get instant summaries from
+            Wikipedia.</p>
+        <a href="/chat" class="button">Go to Chat</a>
+    </div>
+    <script>
+        var video = document.getElementById('bg-video');
+        video.style.height = window.innerHeight + 'px';
+    </script>
+</body>
+
+</html>
